@@ -10,17 +10,17 @@
 import SmartCountDown from 'react-smart-countdown'
 export default class App extends Component {
 
-	state = {
+  state = {
 
     //trigger rerender by change changer value
-    changer: 0, 
+    changer: 0,
 
     //how many seconds to countdown
-    count: 2, 
+    count: 2,
 
     //React.PropTypes.oneOf(['init', 'start', 'pause', 'resume', 'reset'])
     //by passing state to trigger countdown function
-    state: 'init' 
+    state: 'init'
   }
 
   onClick = e => {
@@ -28,16 +28,16 @@ export default class App extends Component {
     countdown.start()
   }
 
-	render() {
+  render() {
     let {count, changer, state} = this.state
-		return (
-			<div
+    return (
+      <div
         style={{
           margin: '30px auto',
           width: 800
         }}
       >
-				<SmartCountDown
+        <SmartCountDown
           count={count}
           state={state}
           changer={changer}
@@ -62,10 +62,10 @@ export default class App extends Component {
           <button className="btn btn-danger mr-1" onClick={() => this.countdown.pause()}>pause</button>
           <button className="btn btn-success" onClick={() => this.countdown.resume()}>resume</button>
         </p>
-			</div>
-		)
-	}
-	
+      </div>
+    )
+  }
+
 }
 ```
 
